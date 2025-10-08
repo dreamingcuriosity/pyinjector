@@ -25,6 +25,7 @@ with open("vars", "r") as f:
         else:
             print(f"Skipping invalid parameter '{line}'")
 # Render template with dynamic parameters
+template = Template(template_content)
 rendered = template.render(**params)
 
 # Write output
